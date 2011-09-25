@@ -1,0 +1,43 @@
+.typography ul.imagelist,
+.typography ul.gallerylist {
+	list-style: none;
+}
+
+.typography ul.imagelist li {
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 5px;
+}
+
+.typography ul.gallerylist li {
+	float: left;
+	width: 150px;
+	height: 135px;
+	margin: 5px;
+	padding: 10px;
+	background: #eee;
+	text-align: center;
+	color: #1808DA;
+	font-family: 'Nobile', arial, sans-serif;
+	font-size: 12px;
+	display: block;
+}
+
+.typography ul.gallerylist li:hover {
+	background: #1808DA;
+	color: #fff;
+}
+
+.typography ul.gallerylist li .title {
+	margin-top: 4px;
+	width: 150px;
+}
+
+.typography ul.gallerylist a.li {
+	display: block;
+}
+
+.typography ul.gallerylist a.li:hover {
+	text-decoration: none;
+}
