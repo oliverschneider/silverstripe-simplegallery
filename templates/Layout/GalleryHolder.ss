@@ -12,6 +12,14 @@
   			</li></a>
   		<% end_control %>
 	</ul>
+	<% if GalleryPages.MoreThanOnePage %>
+		<% if GalleryPages.NotFirstPage %>
+    		<div class="left"><a class="prev" href="$GalleryPages.PrevLink">&laquo; Zur&uuml;ck</a></div>
+		<% end_if %>                
+		<% if GalleryPages.NotLastPage %>
+    		<div class="right"><a class="next" href="$GalleryPages.NextLink">Weiter &raquo;</a></div>
+		<% end_if %>
+	<% end_if %>
 	$Form
 	$PageComments
 </div>
