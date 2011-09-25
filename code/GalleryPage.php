@@ -35,6 +35,13 @@ class GalleryPage extends Page {
    		$imageResource = $this->Images()->First();
    		return ($imageResource) ? $imageResource : null;
    }
+   
+   	public function ImageList($limit=20){
+    	$start = isset($_GET['start']) ? (int) $_GET['start'] : 0;
+      	$list = DataObject::get("ImageResource", "GalleryPageID = {$this->ID}", "","","$start , $limit");
+      	return $list;
+	}
+	
 }
  
 class GalleryPage_Controller extends Page_Controller {

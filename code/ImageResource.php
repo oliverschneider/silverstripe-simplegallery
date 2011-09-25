@@ -16,4 +16,9 @@ class ImageResource extends DataObject {
     public function thumbnail() {
     	return $this->Attachment()->CroppedImage(150,120);
     }
+    
+    function onBeforeDelete() {
+    	parent::onBeforeDelete();
+    	$this->Attachment->delete();
+    }
 }
